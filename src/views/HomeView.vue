@@ -37,7 +37,6 @@
         </a>
       </div>
     </div>
-    
   </section>
 </template>
 
@@ -92,11 +91,7 @@
   }
   img{
     object-fit: cover;
-    /* transition: .6s; */
   }
-  /* img:hover{
-    transform: scale(1.3);
-  } */
 
   .visit-website{
     color: var(--darkColorFont);

@@ -29,84 +29,109 @@
         </div>
     </div>
     <div class="columns is-mobile is-justify-content-center-mobile py-5 has-text-centered is-multiline">
-      <div class="column is-4">
-        <span class="tag single-tag is-large has-text-weight-bold"><i style="color:#41b883" class="fa-brands is-size-3 fa-html5"></i></span>
-        <p class="p-tags">Html5</p>
-      </div>
-      <div class="column is-4">
-        <span class="tag single-tag is-large has-text-weight-bold"><i style="color:#66d3fa" class="fa-brands is-size-3 fa-css3"></i></span>
-        <p class="p-tags">Css3</p>
-      </div>
-      <div class="column is-4">
-        <span class="tag single-tag is-large has-text-weight-bold"><i style="color:#cd6799" class="fa-brands is-size-3 fa-sass"></i></span>
-        <p class="p-tags">Sass</p>
-      </div>
-      <div class="column is-4">
-        <span class="tag single-tag is-large has-text-weight-bold"><img class="image is-24x24" src="https://progsoft.net/images/tailwind-css-icon-70187f0341bd945dc65ad050a9a1b8f4fd79b1cf.png" alt="xx"></span>
-        <p class="p-tags">Tailwind</p>
-      </div>
-      <div class="column is-4">
-        <span class="tag single-tag is-large has-text-weight-bold"><i style="color:#602c50" class="fa-brands is-size-3 fa-bootstrap"></i></span>
-        <p class="p-tags">Bootstrap</p>
-      </div>
-      <div class="column is-4">
-        <span class="tag single-tag is-large has-text-weight-bold"><i style="color:#00D1B2" class="fa-solid is-size-3 fa-file-code"></i></span>
-        <p class="p-tags">Bulma css</p>
-      </div>
-      <div class="column is-4">
-        <span class="tag single-tag is-large has-text-weight-bold"><i style="color:##666666" class="fa-brands is-size-3 fa-github"></i></span>
-        <p class="p-tags">Github</p>
-      </div>
-      <div class="column is-4">
-        <span class="tag single-tag is-large has-text-weight-bold"><i style="color:#f0db4f" class="fa-brands is-size-3 fa-js"></i></span>
-      <p class="p-tags">Javascript</p>
-      </div>
-      <div class="column is-4">
-        <span class="tag single-tag is-large has-text-weight-bold"><i style="color:#41b883" class="fa-brands is-size-3 fa-vuejs"></i></span>
-        <p class="p-tags">Vuejs</p>
-      </div>
-      <div class="column is-4">
-        <span class="tag single-tag is-large has-text-weight-bold"><img class="image is-24x24" src="https://pinia.vuejs.org/logo.svg" alt="xx"></span>
-        <p class="p-tags">Pinia store</p>
-      </div>
-      <div class="column is-4">
-        <span class="tag single-tag is-large has-text-weight-bold"><i style="color:#FECA32" class="fa-solid is-size-3 fa-fire"></i></span>
-        <p class="p-tags">Firebase</p>
-      </div>
-    </div>
-    <!-- info -->
-    <div class="columns has-text-centered info-columns is-multiline">
-      <div class="column is-12">
-        <!--  -->
-          <span class="tag is-align-self-center column is-2 is-large has-text-weight-bold is-size-4 my-5">
-            General info
-          </span>
-      </div>
-      <div class="column has-text-left">
-        <!-- EDUCATION -->
-        <p class="is-size-6 has-text-weight-bold pt-5 pb-1">EDUCATION</p>
-        <p>- Delta higher institute for computers, Egypt (2013 - 2017).</p>
-        <p>- Mangement information systems (Good).</p>
-        <p class="is-size-6 has-text-weight-bold pt-5 pb-1">Soft Skills</p>
-        <p>- Leadership.</p>
-        <p>- Fast Learning.</p>
-        <p>- Persistent.</p>
-        <p>- Teamwork.</p>
-      </div>
-      <!-- OTHER -->
-      <div class="column has-text-left">
-        <p class="is-size-6 has-text-weight-bold pt-5 pb-1">OTHER</p>
-        <p>- Date of Birth : 20 - 10 - 1994</p>
-        <p>- Langauges : Arabic - English</p>
-        <p>- Military status : Completed (May 2018 - May 2019)</p>
+
+      <div 
+      v-for="({logo,title,color},i) in skills"
+      :key='i'
+      class="column is-4">
+        <span class="tag single-tag is-large has-text-weight-bold"><i :style="{color:color}" :class="logo" class="is-size-3"></i></span>
+        <p class="p-tags">{{title}}</p>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
+  // imports
 import ScrollToTop from '../components/scrollToTop/scrollToTop.vue'
-
+// skills
+const skills = [
+  {
+    logo: 'fa-brands fa-html5',
+    title: 'Html',
+    color: '#0080BE'
+  },
+  {
+    logo: 'fa-brands fa-css3',
+    title: 'Css3',
+    color: '#254BDD'
+  },
+  {
+    logo: 'fa-brands fa-sass',
+    title: 'Sass',
+    color: '#CD6799'
+  },
+  {
+    logo: 'fa-brands fa-bootstrap',
+    title: 'Bootstrap',
+    color: '#41b883'
+  },
+  {
+    logo: 'fa-brands fa-css3',
+    title: 'Tailwind',
+    color: '#4EB1AE'
+  },
+  {
+    logo: 'fa-brands fa-css3',
+    title: 'Bulma css',
+    color: '#00D1B2'
+  },
+  {
+    logo: 'fa-brands fa-css3',
+    title: 'Material ui',
+    color: '#007FFF'
+  },
+  {
+    logo: 'fa-brands fa-css3',
+    title: 'Vuetify',
+    color: '#1867C0'
+  },
+  {
+    logo: 'fa-brands fa-github',
+    title: 'Github',
+    color: '#f5f5f5'
+  },
+  {
+    logo: 'fa-brands fa-js',
+    title: 'Javascript',
+    color: '#f7df1e'
+  },
+  {
+    logo: 'fa-brands fa-js',
+    title: 'Regex',
+    color: '#1596D0'
+  },
+  {
+    logo: 'fa-brands fa-js',
+    title: 'Vue js',
+    color: '#42b883'
+  },
+  {
+    logo: 'fa-brands fa-js',
+    title: 'Pinia store',
+    color: '#FFE165'
+  },
+  {
+    logo: 'fa-brands fa-js',
+    title: 'Vuex',
+    color: '#41b883'
+  },
+  {
+    logo: 'fa-brands fa-js',
+    title: 'React js',
+    color: '#61DAFB'
+  },
+  {
+    logo: 'fa-brands fa-js',
+    title: 'Redux',
+    color: '#593D88'
+  },
+  {
+    logo: 'fa-brands fa-js',
+    title: 'Firebase',
+    color: '#F7A110'
+  },
+]
 </script>
 
 <style scoped>
@@ -137,13 +162,11 @@ import ScrollToTop from '../components/scrollToTop/scrollToTop.vue'
     background: #E6642B !important;
   }
   .single-tag:hover  .fa-brands{
-    transform: rotate(0deg);
     transition: .3s;
     transform: scale(2);
     }
     .fa-brands{
       transition: .3s;
-      transform: rotate(-45deg);
     }
   .p-tags{
     color: #000;

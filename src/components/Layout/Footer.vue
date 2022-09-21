@@ -15,9 +15,9 @@
         background: var(--darkColorItems);
         color: var(--darkColorFont);   
     }
-    @media (min-width: 400px) and (max-width: 991px){
+    @media (min-width: 300px) and (max-width: 991px){
             p{
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
         }
 </style>

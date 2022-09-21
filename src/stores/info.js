@@ -5,6 +5,32 @@ export const useInfoStore = defineStore('storeInfo',{
     return {
       projects : [
         {
+          id : 10,
+          image : "https://tesla-cdn.thron.com/delivery/public/image/tesla/6139697c-9d6a-4579-837e-a9fc5df4a773/bvlatuR/std/1200x628/Model-3-Homepage-Social-LHD",
+          title : 'Tesla',
+          desc : 'A simple tesla clone which shows tesla products',
+          techs : {
+            css : 'BOOTSTRAP',
+            js : 'VUE JS',
+            sass: 'SASS',
+            server: 'none',
+          },
+          link: "https://tiny-dango-36b98a.netlify.app/"
+        },
+        {
+          id : 9,
+          image : "https://trendsmena.com/wp-content/uploads/2021/08/2021-06-17-NEWS-TWITTER-PIX.jpg",
+          title : 'Twitter',
+          desc : 'A simple twitter clone where users can add and browse their tweets',
+          techs : {
+            css : 'BOOTSTRAP',
+            js : 'VUE JS',
+            sass: 'SASS',
+            server: 'none',
+          },
+          link: "https://shimmering-mousse-7ed6b9.netlify.app/"
+        },
+        {
           id : 1,
           image : "https://www.modernenglishteacher.com/media/31613/taking-notes-1.jpg?width=470&height=313",
           title : 'Noteballs',

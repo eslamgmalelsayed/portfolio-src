@@ -32,6 +32,7 @@
     right: 20px;
     cursor: pointer;
     color: #fff;
+    z-index: 999;
     }
     .fa-angles-up{
         background: #E6642B;
